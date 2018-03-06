@@ -1,7 +1,8 @@
 build:
-	docker build -t user-cli .
+	docker build -t mig-user-cli .
 
 run:
-	docker run --net="host" \
-	-e MICRO_REGISTRY=mdns \
-	user-cli
+	docker run --name mig-user-cli \
+		--net="host" \
+		-e MICRO_REGISTRY=mdns \
+		mig-user-cli
