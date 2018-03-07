@@ -3,6 +3,6 @@ build:
 
 run:
 	docker run --name mig-user-cli \
-		--net="host" \
+		--net mig \
 		-e MICRO_REGISTRY=mdns \
 		mig-user-cli
